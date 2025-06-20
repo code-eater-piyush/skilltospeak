@@ -1,0 +1,112 @@
+.features-section {
+  padding: 5rem 2rem;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.features-grid {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.features-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.feature-card {
+  min-width: 280px;
+  height: 300px;
+  background: #C7EEFF; /* Light blue card background */
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 2rem;
+  color: #333; /* Dark text for contrast */
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0077C0; /* Blue heading */
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333; /* Dark text */
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, #000000, #0077C0); /* Black to blue gradient */
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+.feature-card::after {
+  content: '';
+  position: absolute;
+  background: #C7EEFF; /* Matches card background */
+  inset: 5px;
+  border-radius: 15px;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Desktop - full row without scrolling */
+@media (min-width: 1200px) {
+  .features-grid {
+    justify-content: center;
+    overflow-x: visible;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    width: calc(25% - 2rem);
+    min-width: auto;
+  }
+}
+
+/* Tablet - 2 cards visible */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .feature-card {
+    min-width: 350px;
+  }
+}

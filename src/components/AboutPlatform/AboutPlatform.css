@@ -1,0 +1,71 @@
+.about-platform {
+  padding: 5rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.platform-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.platform-content {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.platform-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+.platform-features {
+  display: flex;
+  gap: 2rem;
+}
+
+.feature {
+  text-align: center;
+  flex: 1;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.platform-image {
+  flex: 1;
+}
+
+.platform-image img {
+  width: 90%;
+  height: 60%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .platform-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .platform-features {
+    flex-direction: column;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
